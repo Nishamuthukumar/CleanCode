@@ -1,0 +1,30 @@
+Review1 = Use camelCase for variables-
+int elapsedTimeInDay
+ 
+Review2 = 
+List<Employee> employees = databaseService.GetEmployees().ToList();
+ 
+Review3 = Avoid Redundant Names
+Do not include the type of the variable or class in its name.
+int counter;
+string fullName;
+DateTime modifiedDate;
+ 
+Review4 = Meaningful Name for Parameters
+public bool IsShopOpen(string day, int amount)
+{
+    // some logic
+}
+ 
+Review5
+const int DaysInWeek = 7;
+const int DaysInMonth = 30;
+ 
+var songs = new List<string> { 'Back In Black', 'Stairway to Heaven', 'Hey Jude' };
+var artists = new List<string> { 'ACDC', 'Led Zeppelin', 'The Beatles' };
+//Use PascalCase for methods
+bool EraseDatabase() {}
+bool RestoreDatabase() {}
+//Use PascalCase for classes
+class Animal {}
+class Alpaca {}
