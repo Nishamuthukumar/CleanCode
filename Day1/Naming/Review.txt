@@ -28,3 +28,17 @@ bool RestoreDatabase() {}
 //Use PascalCase for classes
 class Animal {}
 class Alpaca {}
+
+Review6
+public class Employee
+{
+    public Datetime StartWorkDate { get; set; } // get set Start Working Date
+    public Datetime ModificationTime { get; set; } // get set Modification Time
+}
+ 
+Review7
+var employeePhone;
+public double CalculateSalary(int workingDays, int workingHours)
+{
+    // some logic
+}
