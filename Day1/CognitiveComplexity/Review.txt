@@ -1,0 +1,46 @@
+Review 1
+CognitiveComplexity Original = 10 Refactored = 3
+public bool IsShopOpen(string day)
+{
+    if (string.IsNullOrEmpty(day)) 
+    {
+        return false; 
+    }
+    var openDays = new HashSet<string> { "friday", "saturday", "sunday" };
+    return openDays.Contains(day.ToLower()); 
+}
+------------------------------------------------------------------------------------
+Review 2
+C.C Original = 19 Refactored = 7
+public long Fibonacci(int n)
+{
+    if (n >= 50)
+    {
+        throw new System.Exception("Not supported");
+    }
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+------------------------------------------------------------------------------------
+Review 3
+The Variable name "l" and "li" is not meaningful. Refactor the method to make it more readable.
+------------------------------------------------------------------------------------
+Review 4
+The user role is not proper
+userRole==8 is not readable and there is hardcoding, 
+can have a const for Admin e.g.
+const string Admin="Admin"
+if (userRole == Admin)
+------------------------------------------------------------------------------------
+Review 5
+No need to repeat `Car` prefix for properties since the class name is already `Car`.
+------------------------------------------------------------------------------------
+Review 6
+no need to check for null it can be defined directly
