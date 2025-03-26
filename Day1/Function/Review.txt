@@ -1,0 +1,82 @@
+Review 2:
+public void ComputeDiscountOnTotalAmount(Order order, decimal discountAmount)  
+{  
+      return new Order { Total = order.Total * (1 - discount) }; 
+}  
+----------------------------------------------------------------------------
+Review 3:
+
+public bool IsDOMNodePresent(string node)
+{
+    // ...
+}
+
+if (IsDOMNodePresent(node))
+{
+    // ...
+}
+----------------------------------------------------------------------------
+Review 5:
+Let each specific vehicle implement the TravelTo method so that no type checking is required.
+
+public interface IVehicle
+{
+    void TravelTo(Location location);
+}
+
+public class Bicycle : IVehicle
+{
+    public void TravelTo(Location location)
+    {
+        PeddleTo(location);
+    }
+
+    private void PeddleTo(Location location)
+    {
+        // Bicycle-specific logic
+    }
+}
+
+public class Car : IVehicle
+{
+    public void TravelTo(Location location)
+    {
+        DriveTo(location);
+    }
+
+    private void DriveTo(Location location)
+    {
+        // Car-specific logic
+    }
+}
+
+----------------------------------------------------------------------------
+Review 6:
+public void CreateFile(string name, bool temp = true)
+{
+    if (temp)
+    {
+        Touch(name);
+    }
+    else
+    {
+        Touch("./temp/" + name);
+    }
+}
+----------------------------------------------------------------------------
+Review 8:
+The method CreateMenu takes four parameters: title, body, buttonText, and cancellable. Methods with too many parameters are often considered a code smell because they can make the method harder to understand, maintain, and test.
+Solution: Refactor the parameters into a single object
+
+public class Menu
+{
+    public string Title { get; set; }
+    public string Body { get; set; }
+    public string ButtonText { get; set; }
+    public bool Cancellable { get; set; }
+}
+
+public void CreateMenu(Menu menu)
+{
+    // Use menu.Title, menu.Body, etc.
+}
